@@ -1,3 +1,4 @@
+
 theme = "onedark"
 
 [editor]
@@ -11,13 +12,54 @@ normal = "block"
 select = "underline"
 
 [keys.normal]
+# Fichier
+C-s = ":write"
+C-p = "file_picker"
+
+# Historique
+C-z = "undo"
+C-y = "redo"
+
+# Recherche
+C-f = "search"
+
+# Sélections multiples : comportement proche de VS Code
+C-d = ["select_mode", "search_selection", "extend_search_next"]
+
+# Commentaires
+"C-/" = "toggle_comments"
+
+# Navigation entre les tampons
+C-tab = "goto_next_buffer"
+"C-S-tab" = "goto_previous_buffer"
+
+# Presse-papiers système
+C-a = "select_all"
+C-c = "yank_to_clipboard"
+C-x = ["yank_to_clipboard", "delete_selection"]
+C-v = "paste_clipboard_after"
+
+[keys.select]
 C-s = ":write"
 C-z = "undo"
 C-y = "redo"
-C-d = ["select_mode", "search_selection", "extend_search_next"]
-
-[keys.select]
 C-d = "extend_search_next"
+C-f = "search"
+"C-/" = "toggle_comments"
+
+C-a = "select_all"
+C-c = "yank_to_clipboard"
+C-x = ["yank_to_clipboard", "delete_selection"]
+C-v = "paste_clipboard_after"
 
 [keys.insert]
 C-s = ":write"
+C-z = "undo"
+C-y = "redo"
+C-f = "search"
+C-p = "file_picker"
+C-a = "select_all"
+C-c = "yank_to_clipboard"
+C-x = ["yank_to_clipboard", "delete_selection"]
+C-v = "paste_clipboard_after"
+"C-/" = "toggle_comments"
