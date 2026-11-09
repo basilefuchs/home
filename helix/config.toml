@@ -14,6 +14,10 @@ select = "underline"
 C-s = ":write"
 C-z = "undo"
 C-y = "redo"
+C-d = ["select_mode", "search_selection", "extend_search_next"]
+
+[keys.select]
+C-d = "extend_search_next"
 
 [keys.insert]
 C-s = ":write"
