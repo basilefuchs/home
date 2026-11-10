@@ -3,14 +3,7 @@ theme = "onedark"
 
 [editor]
 mouse = true
+true-color = true
 
 [keys.insert]
 j = { k = "normal_mode" }
-"A-h" = "move_char_left"
-"A-j" = "move_line_down"
-"A-k" = "move_line_up"
-"A-l" = "move_char_right"
-
-[keys.normal]
-"A-j" = "copy_selection_on_next_line"
-"A-k" = "copy_selection_on_prev_line"
